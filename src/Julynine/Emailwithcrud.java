@@ -85,6 +85,7 @@ public class Emailwithcrud {
 
     }
     private static void updateuser(){
+        readuser();
         System.out.println("Enter the index value of the user:");
 
         if(sc.hasNextInt()) {
@@ -115,6 +116,7 @@ public class Emailwithcrud {
 
     }
      private static void deleteuser() {
+        readuser();
 
          System.out.println("Enter the index of the user to delete:");
 
