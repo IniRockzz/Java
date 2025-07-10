@@ -28,11 +28,9 @@ public class Crud {
                 case 5 -> running = false;
                 default -> System.out.println("Invaild choice");
             }
-
         }
-
-
     }
+
         private static void createuser(){
             System.out.println("Enter the username:");
             String name = sc.nextLine();

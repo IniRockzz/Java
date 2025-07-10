@@ -5,23 +5,25 @@ import java.util.Scanner;
 
 public class Emailwithcrud {
      static class User {
-        String username;
+        String username; //variable
         String email;
         String password;
 
+        // () parameter
         public User(String username, String email, String password) {
-            this.username = username;
+            this.username = username; // reference variable
             this.email = email;
             this.password = password;
         }
     }
-    private static  ArrayList<User> users = new ArrayList<>();
-    private static  Scanner sc = new Scanner(System.in);
+    private static  ArrayList<User> users = new ArrayList<>(); // collection
+    private static  Scanner sc = new Scanner(System.in); // method or function
 
+    // main function
     public static void main (String[]args){
 
 
-        boolean running = true;
+        boolean running = true;// controller
         while (running){
             System.out.println("\n1.Create User");
             System.out.println("2.Read user");
@@ -33,7 +35,7 @@ public class Emailwithcrud {
             sc.nextLine();
 
             switch (choice){
-                case 1 -> createuser();
+                case 1 -> createuser();// rule switch
                 case 2 -> readuser();
                 case 3 -> updateuser();
                 case 4 -> deleteuser();
@@ -45,6 +47,8 @@ public class Emailwithcrud {
         }
         System.out.println("Byeeee");
     }
+
+    // function
     private static void createuser() {
         System.out.println("Enter the username:");
         String username = sc.nextLine();
@@ -55,6 +59,7 @@ public class Emailwithcrud {
             System.out.println("valid email");
         }else{
             System.out.println("Invalid email");
+            return ;
         }
 
         System.out.println("Enter the password:");
@@ -85,9 +90,10 @@ public class Emailwithcrud {
 
     }
     private static void updateuser(){
-        readuser();
+        readuser(); // calling function
         System.out.println("Enter the index value of the user:");
 
+        // new scanner method , for exceptional handling
         if(sc.hasNextInt()) {
             int index = sc.nextInt();
             sc.nextLine();
