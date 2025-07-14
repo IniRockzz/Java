@@ -1,4 +1,4 @@
-package Julyeleven;
+package Julyfourteen;
 
 import java.util.Scanner;
         // class
